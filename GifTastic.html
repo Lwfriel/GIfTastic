@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Travel</title>
+  <style type="text/css">
+    button,
+    div,
+    input,
+    form
+     {
+      margin: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Location Search</h1>
+    <div id="buttons-view"></div>
+
+    <form id="location-form">
+      <label for="location-input">Add a Country!</label>
+      <input type="text" id="location-input">
+      <br>
+      <input id="add-location" type="submit" value="Add a location!">
+    </form>
+
+    <div id="location-view"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // Add location array 
+      var location = ["Ireland", "Brazil", "Japan", "South Africa"];
+
+      // Connect appropriate information
+      function displayLocationInfo() {
+        var location = $(this).attr("data-name");
+        var queryURL = "https://www.omdbapi.com/?t=" + location + "GZIVzVzkk9rNsXiVO7ycVJrUlpdI1tA5";
+      };
+
+    </script>
+  </div>
+</body>
+
+</html>
